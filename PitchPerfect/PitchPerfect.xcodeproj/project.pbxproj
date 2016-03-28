@@ -12,6 +12,7 @@
 		5FDFD25D1CA88F2C00FC4014 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDFD25B1CA88F2C00FC4014 /* Main.storyboard */; };
 		5FDFD25F1CA88F2C00FC4014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FDFD25E1CA88F2C00FC4014 /* Assets.xcassets */; };
 		5FDFD2621CA88F2C00FC4014 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDFD2601CA88F2C00FC4014 /* LaunchScreen.storyboard */; };
+		5FDFD26A1CA8B27200FC4014 /* PlaySoundsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDFD2691CA8B27200FC4014 /* PlaySoundsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5FDFD25E1CA88F2C00FC4014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FDFD2611CA88F2C00FC4014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FDFD2631CA88F2C00FC4014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FDFD2691CA8B27200FC4014 /* PlaySoundsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				5FDFD2571CA88F2C00FC4014 /* AppDelegate.swift */,
 				5FDFD2591CA88F2C00FC4014 /* RecordSoundsVC.swift */,
+				5FDFD2691CA8B27200FC4014 /* PlaySoundsVC.swift */,
 				5FDFD25B1CA88F2C00FC4014 /* Main.storyboard */,
 				5FDFD25E1CA88F2C00FC4014 /* Assets.xcassets */,
 				5FDFD2601CA88F2C00FC4014 /* LaunchScreen.storyboard */,
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FDFD26A1CA8B27200FC4014 /* PlaySoundsVC.swift in Sources */,
 				5FDFD25A1CA88F2C00FC4014 /* RecordSoundsVC.swift in Sources */,
 				5FDFD2581CA88F2C00FC4014 /* AppDelegate.swift in Sources */,
 			);
@@ -283,6 +287,7 @@
 				5FDFD2681CA88F2C00FC4014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

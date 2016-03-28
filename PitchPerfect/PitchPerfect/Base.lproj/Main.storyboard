@@ -4,39 +4,28 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="uyT-Y2-lAV">
+        <!--Play SoundsVC-->
+        <scene sceneID="wlE-e7-lnV">
             <objects>
-                <tableViewController id="4pe-tq-pjP" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8Y0-Q5-kZW">
+                <viewController id="rzK-KD-htj" customClass="PlaySoundsVC" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y6Z-7e-tx7"/>
+                        <viewControllerLayoutGuide type="bottom" id="BGO-v8-5JB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UZv-Qc-5OT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5Mm-F6-HnB">
-                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Mm-F6-HnB" id="tzd-9f-bHW">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="4pe-tq-pjP" id="dhP-Pq-Dbu"/>
-                            <outlet property="delegate" destination="4pe-tq-pjP" id="NBr-Pc-3CV"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="dqW-k0-RML"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v4F-Jl-Kg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-xI-GWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1746" y="-82"/>
+            <point key="canvasLocation" x="1421" y="-409"/>
         </scene>
         <!--Record SoundsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RecordSoundsVC" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stopRecording" id="BYZ-38-t0r" customClass="RecordSoundsVC" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -89,6 +78,7 @@
                         <outlet property="recordButton" destination="BMk-Si-PbM" id="6nG-6o-Cb1"/>
                         <outlet property="recordingLabel" destination="mie-RV-hMH" id="KHZ-cp-oF1"/>
                         <outlet property="stopRecordingButton" destination="Na3-Bp-6mh" id="JkS-OO-BoG"/>
+                        <segue destination="rzK-KD-htj" kind="show" id="oO2-LS-c3T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
