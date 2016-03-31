@@ -15,6 +15,14 @@ class PlaySoundsVC: UIViewController {
     var receivedAudio:RecordedAudio!
     //var recordedAudio: NSURL
     
+    @IBOutlet weak var snailButton: UIButton!
+    @IBOutlet weak var kangarooButton: UIButton!
+    @IBOutlet weak var chipmunkButton: UIButton!
+    @IBOutlet weak var darthVaderButton: UIButton!
+    @IBOutlet weak var reverbButton: UIButton!
+    @IBOutlet weak var echoButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -38,6 +46,15 @@ class PlaySoundsVC: UIViewController {
     }
     
 
+    @IBAction func playButtonPressed(sender: AnyObject) {
+        print("play sound button pressed")
+    }
+    
+    
+    
+    @IBAction func stopButtonPressed(sender: AnyObject) {
+        print("stop sound button pressed")
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
