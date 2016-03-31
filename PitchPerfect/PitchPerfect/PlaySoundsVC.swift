@@ -7,17 +7,38 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlaySoundsVC: UIViewController {
     
+    var audioPlayer:AVAudioPlayer!
+    var receivedAudio:RecordedAudio!
     //var recordedAudio: NSURL
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+//        do {
+//            var filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3")
+//            var filePathUrl = NSURL.fileURLWithPath(filePath!)
+//           try audioPlayer = AVAudioPlayer(contentsOfURL: filePathUrl)
+//            audioPlayer.enableRate = true
+//        } catch {
+//            print("Error is \(error)")
+//           // return nil
+//        }
+        
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
+            audioPlayer.enableRate = true
+        } catch {
+            print("Error is \(error)")
+        }
     }
+    
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

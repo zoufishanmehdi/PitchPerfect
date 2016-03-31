@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FDE56121CAC8A800018A9F5 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDE56111CAC8A800018A9F5 /* RecordedAudio.swift */; };
 		5FDFD2581CA88F2C00FC4014 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDFD2571CA88F2C00FC4014 /* AppDelegate.swift */; };
 		5FDFD25A1CA88F2C00FC4014 /* RecordSoundsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDFD2591CA88F2C00FC4014 /* RecordSoundsVC.swift */; };
 		5FDFD25D1CA88F2C00FC4014 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDFD25B1CA88F2C00FC4014 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5FDE56111CAC8A800018A9F5 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 		5FDFD2541CA88F2C00FC4014 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FDFD2571CA88F2C00FC4014 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FDFD2591CA88F2C00FC4014 /* RecordSoundsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsVC.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		5FDFD24B1CA88F2B00FC4014 = {
 			isa = PBXGroup;
 			children = (
+				5FDE56111CAC8A800018A9F5 /* RecordedAudio.swift */,
 				5FDFD2561CA88F2C00FC4014 /* PitchPerfect */,
 				5FDFD2551CA88F2C00FC4014 /* Products */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FDE56121CAC8A800018A9F5 /* RecordedAudio.swift in Sources */,
 				5FDFD26A1CA8B27200FC4014 /* PlaySoundsVC.swift in Sources */,
 				5FDFD25A1CA88F2C00FC4014 /* RecordSoundsVC.swift in Sources */,
 				5FDFD2581CA88F2C00FC4014 /* AppDelegate.swift in Sources */,
