@@ -11,9 +11,9 @@ import AVFoundation
 
 class PlaySoundsVC: UIViewController {
     
-    var audioPlayer:AVAudioPlayer!
-    var receivedAudio:RecordedAudio!
-    //var recordedAudio: NSURL
+//    var audioPlayer:AVAudioPlayer!
+//    var receivedAudio:RecordedAudio!
+    
     
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var kangarooButton: UIButton!
@@ -23,8 +23,14 @@ class PlaySoundsVC: UIViewController {
     @IBOutlet weak var echoButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var recordedAudioURL: NSURL!
+    var audioFile: AVAudioFile!
+    var audioEngine: AVAudioEngine!
+    var audioPlayerNode: AVAudioPlayerNode!
+    var stopTimer: NSTimer!
+    
+    enum ButtonType: Int { case Slow = 0, Fast = 1, Chipmunk = 2, Vader = 3, Reverb = 5, Echo = 4}
+   
         // Do any additional setup after loading the view.
         
 //        do {
@@ -36,18 +42,34 @@ class PlaySoundsVC: UIViewController {
 //            print("Error is \(error)")
 //           // return nil
 //        }
-        
-        do {
-            try audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
-            audioPlayer.enableRate = true
-        } catch {
-            print("Error is \(error)")
-        }
-    }
-    
+//        
+//        do {
+//            try audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
+//            audioPlayer.enableRate = true
+//        } catch {
+//            print("Error is \(error)")
+//        }
+//    }
+//    
 
     @IBAction func playButtonPressed(sender: AnyObject) {
         print("play sound button pressed")
+        switch(ButtonType(rawValue: sender.tag)!) {
+        case .Slow:
+            playSound(rate: 0.5)
+        case .Fast:
+            playSound(rate: 1.5)
+        case .Chipmunk:
+            playSound(pitch: 1000)
+        case .Vader:
+            playSound(pitch: -1000)
+        case .Echo:
+            playSound(echo: true)
+        case .Reverb:
+            playSound(reverb: true)
+        }
+        
+        configureUI(.Playing)
     }
     
     
@@ -56,20 +78,29 @@ class PlaySoundsVC: UIViewController {
         print("stop sound button pressed")
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    
+    var recordedAudio: NSURL!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       setupAudio() 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+
+    override func viewWillAppear(animated: Bool) {
+        
+        configureUI(.NotPlaying)
+        
+    }
 
 }
+/*
+// MARK: - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+// Get the new view controller using segue.destinationViewController.
+// Pass the selected object to the new view controller.
+}
+*/
